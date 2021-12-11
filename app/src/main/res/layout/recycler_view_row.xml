@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rvCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="5dp"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="true"
+    android:layout_marginBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/taskTV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="start|center"
+            android:layout_weight="0.7"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:paddingStart="10dp"
+            tools:text="Task" />
+
+        <ImageView
+            android:id="@+id/editTaskIV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.15"
+            android:src="@drawable/update_task_drawable"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="center"
+            android:contentDescription="@string/update_task" />
+
+        <ImageView
+            android:id="@+id/deleteTaskIV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.15"
+            android:src="@drawable/delete_task_drawable"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="center"
+            android:contentDescription="@string/delete_task" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

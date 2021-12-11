@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.ToDoList.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.ToDoList.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/linLayAddTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_below="@+id/appBarLayout"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/enterTaskTIL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.80"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusBottomEnd="10dp">
+
+            <EditText
+                android:id="@+id/enterTaskET"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/enter_your_task"
+                android:layout_marginTop="5dp"
+                android:autofillHints="emailAddress"
+                android:inputType="textEmailAddress"
+                android:paddingStart="13dp"
+                android:paddingEnd="13dp"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:background="@null"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_gravity="top"
+            android:paddingTop="5dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.20">
+
+            <ImageView
+                android:id="@+id/btnAddTask"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:src="@drawable/add_task_drawable"
+                android:contentDescription="@string/add_task" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/taskListTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linLayAddTask"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/your_task_list"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvItemsList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/taskListTV"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginHorizontal="10dp"
+        tools:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvNoRecordsAvailable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/task_list_is_empty"
+        android:textSize="18sp"
+        tools:visibility="gone" />
+
+</RelativeLayout>

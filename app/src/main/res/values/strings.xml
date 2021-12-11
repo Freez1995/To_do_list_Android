@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">To do list</string>
+    <string name="enter_your_task">Enter your task</string>
+    <string name="add_task">Add_task</string>
+    <string name="your_task_list">Your task list:</string>
+    <string name="task_list_is_empty">Task list is empty</string>
+    <string name="update_task">update_task</string>
+    <string name="delete_task">delete_task</string>
+    <string name="task">Task</string>
+    <string name="update_task_2">Update Task</string>
+    <string name="update">UPDATE</string>
+    <string name="cancel">CANCEL</string>
+</resources>
